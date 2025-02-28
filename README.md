@@ -7,23 +7,19 @@
 </head>
 <body>
     <h1>Witamy na bardzo głośnej stronie!</h1>
-    <button id="playButton">Kliknij, aby usłyszeć dźwięk!</button>
-    <audio id="audio" src="audio.mp3" preload="auto" loop>
+    <audio id="audio" src="audio.mp3" preload="auto" loop autoplay>
         Twoja przeglądarka nie wspiera tagu audio.
     </audio>
-    
+
     <script>
-        // Pobranie elementu audio oraz przycisku
+        // Pobranie elementu audio
         var audio = document.getElementById("audio");
-        var playButton = document.getElementById("playButton");
 
         // Ustawienie maksymalnej głośności
         audio.volume = 1;  // 1 to maksymalna głośność (0 - 1)
 
-        // Funkcja odtwarzająca dźwięk po kliknięciu przycisku
-        playButton.addEventListener("click", function() {
-            audio.play();
-        });
+        // Rozpoczęcie odtwarzania dźwięku
+        audio.play();
     </script>
 </body>
 </html>
