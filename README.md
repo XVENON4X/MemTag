@@ -13,10 +13,8 @@
     <script>
         // Pobranie elementu audio
         var audio = document.getElementById("audio");
-        
         // Ustawienie maksymalnej głośności
         audio.volume = 1;  // 1 to maksymalna głośność (0 - 1)
-
         // Rozpoczęcie odtwarzania dźwięku od razu po załadowaniu strony
         audio.play();
     </script>
