@@ -7,7 +7,7 @@
 </head>
 <body>
     <h1>Witamy na bardzo głośnej stronie!</h1>
-    <audio id="audio" src="audio.mp3" preload="auto" loop autoplay>
+    <audio id="audio" src="audio.mp3" preload="auto" loop muted>
         Twoja przeglądarka nie wspiera tagu audio.
     </audio>
 
@@ -15,11 +15,16 @@
         // Pobranie elementu audio
         var audio = document.getElementById("audio");
 
+        // Rozpoczęcie odtwarzania dźwięku z wyciszeniem
+        audio.play();
+
         // Ustawienie maksymalnej głośności
         audio.volume = 1;  // 1 to maksymalna głośność (0 - 1)
 
-        // Rozpoczęcie odtwarzania dźwięku
-        audio.play();
+        // Po 1 sekundzie odmutowanie dźwięku
+        setTimeout(function() {
+            audio.muted = false;
+        }, 1000);  // 1000 ms = 1 sekunda
     </script>
 </body>
 </html>
